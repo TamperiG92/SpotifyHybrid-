@@ -1,0 +1,246 @@
+.stack-title {
+  margin: 0;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b7280;
+  background: #f3f4f6;
+}
+
+.page-content {
+  --background: #e5e7eb;
+}
+
+.page-content::part(scroll) {
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+/* ---------- Marco de teléfono ---------- */
+
+.phone-frame {
+  position: relative;
+  width: 300px;
+  height: 620px;
+  margin: 0 auto;
+  padding: 14px;
+  border-radius: 46px;
+  background: #0a0a0a;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.notch {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 24px;
+  border-radius: 14px;
+  background: #0a0a0a;
+  z-index: 5;
+}
+
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 34px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #114a2c 0%, #06170f 38%, #050505 100%);
+}
+
+.home-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Barra de estado ---------- */
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px 4px;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  .time {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .status-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+}
+
+/* ---------- Reproductor ---------- */
+
+.player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 22px 8px;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.player-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 18px;
+
+  ion-icon {
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  .player-topbar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+
+    .eyebrow {
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .playlist-name {
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+}
+
+.cover-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.cover-art {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 2px;
+  background: linear-gradient(135deg, #22e06b 0%, #0a7a3c 100%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.track-info {
+  padding-bottom: 18px;
+
+  .track-title {
+    margin: 0 0 2px;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .track-artist {
+    margin: 0;
+    font-size: 12px;
+    color: #8fd4a8;
+  }
+}
+
+.progress {
+  padding-bottom: 20px;
+
+  .progress-bar {
+    position: relative;
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.3);
+
+    .progress-fill {
+      position: absolute;
+      inset: 0;
+      width: 35%;
+      border-radius: 2px;
+      background: #ffffff;
+    }
+
+    .progress-thumb {
+      position: absolute;
+      left: 35%;
+      top: 50%;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #ffffff;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .progress-time {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6px;
+    font-size: 10px;
+    color: #8fd4a8;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 22px;
+
+  > ion-icon {
+    font-size: 26px;
+    color: #ffffff;
+  }
+
+  .play-button {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #f2f2f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ion-icon {
+      font-size: 24px;
+      color: #0a0a0a;
+    }
+  }
+}
+
+.player-bottombar {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+
+  ion-icon {
+    font-size: 16px;
+    color: #8fd4a8;
+  }
+}

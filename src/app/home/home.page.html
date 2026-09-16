@@ -1,0 +1,74 @@
+<h1 class="stack-title">Maquetado con Ionic + Angular</h1>
+
+<ion-content [fullscreen]="true" class="page-content">
+  <div class="phone-frame">
+    <div class="notch"></div>
+
+    <div class="phone-screen">
+
+      <!-- Barra de estado -->
+      <div class="status-bar">
+        <span class="time">11:28</span>
+        <div class="status-icons">
+          <ion-icon name="cellular"></ion-icon>
+          <ion-icon name="wifi"></ion-icon>
+          <ion-icon name="battery-full-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="player">
+
+        <!-- Barra superior -->
+        <div class="player-topbar">
+          <ion-icon name="chevron-down-outline"></ion-icon>
+          <div class="player-topbar-info">
+            <span class="eyebrow">REPRODUCIENDO DESDE TU BIBLIOTECA</span>
+            <span class="playlist-name">Favoritos</span>
+          </div>
+          <ion-icon name="ellipsis-vertical"></ion-icon>
+        </div>
+
+        <!-- Portada -->
+        <div class="cover-wrapper">
+          <div class="cover-art"></div>
+        </div>
+
+        <!-- Título y artista -->
+        <div class="track-info">
+          <h2 class="track-title">Lorem ipsum dolor sit....</h2>
+          <p class="track-artist">Lorem</p>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="progress">
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+            <div class="progress-thumb"></div>
+          </div>
+          <div class="progress-time">
+            <span>00:36</span>
+            <span>04:15</span>
+          </div>
+        </div>
+
+        <!-- Controles -->
+        <div class="controls">
+          <ion-icon name="play-skip-back"></ion-icon>
+          <div class="play-button">
+            <ion-icon name="pause"></ion-icon>
+          </div>
+          <ion-icon name="play-skip-forward"></ion-icon>
+        </div>
+
+        <!-- Barra inferior -->
+        <div class="player-bottombar">
+          <ion-icon name="desktop-outline"></ion-icon>
+          <ion-icon name="share-outline"></ion-icon>
+        </div>
+
+      </div>
+
+      <div class="home-indicator"></div>
+    </div>
+  </div>
+</ion-content>
