@@ -2,6 +2,15 @@
 
 App híbrida (Ionic 9 + Angular 22 + Capacitor 8) con login, registro y reproductor.
 
+## Integrantes
+
+- Diego Alejandro Cala Espitia
+- Cristian David Collazos Bocanegra
+- Oscar Leonardo Andrade Diaz
+- Diego Fernando Garzon Tovar
+- Cristian Camilo Camacho Cifuentes
+- ______________________________
+
 ## Requisitos
 
 - **Node.js 22.22.3 o superior** (o 24.15+). Con versiones anteriores, Angular 22 no instala ni compila.
