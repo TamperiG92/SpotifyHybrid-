@@ -3,9 +3,37 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Ionic App</title>
+  <title>Spotify Hybrid</title>
 
   <base href="/" />
+
+  <!--
+    ==========================================================================
+    CABECERAS DE SEGURIDAD DECLARADAS EN EL HTML
+    ==========================================================================
+    Content-Security-Policy (CSP): segunda línea de defensa contra XSS.
+      - default-src 'self'      → por defecto solo recursos del propio origen.
+      - script-src 'self'       → sin scripts inline ni de terceros, sin eval().
+      - style-src 'unsafe-inline' → necesario porque Ionic/Angular inyectan estilos
+                                   de componentes en tiempo de ejecución.
+      - img-src 'self' data:    → iconos y SVG embebidos.
+      - connect-src 'self'      → fetch/XHR solo a nuestro origen (API, iconos).
+      - object-src 'none'       → bloquea <object>/<embed> (Flash, plugins).
+      - base-uri 'self'         → impide secuestrar <base href> para cargar scripts ajenos.
+      - form-action 'self'      → los formularios solo pueden enviarse a nuestro origen.
+    ℹ️ No se usa `upgrade-insecure-requests` aquí: al servir la app por http desde una
+       IP de red (p. ej. probar en el celular con `ng serve --host 0.0.0.0`) forzaba
+       https en los propios scripts y la página quedaba en blanco. HTTPS se debe
+       imponer desde el servidor (redirección + HSTS).
+    ⚠️ Directivas como frame-ancestors (anti-clickjacking), HSTS, X-Content-Type-Options
+       o Permissions-Policy NO funcionan desde <meta>: deben enviarse como cabeceras
+       HTTP desde el servidor/CDN (ver SECURITY.md).
+  -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+
+  <!-- No enviar la URL completa (que puede incluir parámetros) a otros sitios. -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <meta name="color-scheme" content="light dark" />
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />

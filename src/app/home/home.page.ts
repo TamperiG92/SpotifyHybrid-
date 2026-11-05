@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+
+import { AuthService } from '../core/auth/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,10 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
+  private readonly auth = inject(AuthService);
 
-  constructor() {}
-
+  /** Cierra la sesión del usuario (servidor + estado local) y vuelve al login. */
+  logout(): void {
+    this.auth.logout('user');
+  }
 }

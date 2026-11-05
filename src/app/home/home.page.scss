@@ -244,3 +244,12 @@
     color: #8fd4a8;
   }
 }
+
+/* Botón de cierre de sesión (sin estilos nativos) */
+.logout-button {
+  display: flex;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}

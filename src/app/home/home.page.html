@@ -63,6 +63,10 @@
         <!-- Barra inferior -->
         <div class="player-bottombar">
           <ion-icon name="desktop-outline"></ion-icon>
+          <!-- Cierre de sesión: invalida la cookie en el servidor y limpia el estado local. -->
+          <button type="button" class="logout-button" (click)="logout()" aria-label="Log out">
+            <ion-icon name="log-out-outline" aria-hidden="true"></ion-icon>
+          </button>
           <ion-icon name="share-outline"></ion-icon>
         </div>
 

@@ -1,0 +1,76 @@
+@use '../../theme/device-frame';
+@use '../../theme/auth-form';
+
+// ============================================================================
+// Pantalla de login — elementos propios (el resto viene de auth-form).
+// ============================================================================
+
+.reset-link {
+  align-self: flex-start;
+  margin-top: 2px;
+  padding-left: 2px;
+  font-size: 12px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 10px;
+  font-size: 11px;
+  color: #b3b3b3;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #3e3e3e;
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+// Botones sociales con área táctil de 48px.
+.btn-social {
+  position: relative;
+  min-height: 48px;
+  border: 1px solid #878787;
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+
+  ion-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+  }
+
+  .ic-facebook {
+    color: #1877f2;
+  }
+  .ic-google {
+    color: #ea4335;
+  }
+
+  &:disabled {
+    opacity: 0.55;
+  }
+}
+
+.settings {
+  align-self: center;
+  margin-top: 2px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+}

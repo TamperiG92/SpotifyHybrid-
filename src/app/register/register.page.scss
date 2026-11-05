@@ -1,0 +1,69 @@
+@use '../../theme/device-frame';
+@use '../../theme/auth-form';
+
+// ============================================================================
+// Pantalla de registro — elementos propios (el resto viene de auth-form).
+// ============================================================================
+
+// ---------- Fortaleza de la contraseña ----------
+.strength {
+  --level-color: #5a5a5a;
+  margin-top: 8px;
+
+  &[data-level='weak'] {
+    --level-color: #ff6b6b;
+  }
+  &[data-level='medium'] {
+    --level-color: #ffd166;
+  }
+  &[data-level='strong'] {
+    --level-color: #1ed760;
+  }
+}
+
+.strength-bar {
+  height: 4px;
+  border-radius: 2px;
+  background: #3e3e3e;
+  overflow: hidden;
+
+  span {
+    display: block;
+    height: 100%;
+    background: var(--level-color);
+    transition: width 0.2s ease, background-color 0.2s ease;
+  }
+}
+
+.strength-label {
+  margin: 6px 0 4px;
+  font-size: 12px;
+  color: #b3b3b3;
+
+  strong {
+    color: var(--level-color);
+  }
+}
+
+.rules {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  color: #b3b3b3;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 0;
+
+    ion-icon {
+      font-size: 14px;
+    }
+
+    &.ok {
+      color: #1ed760;
+    }
+  }
+}
