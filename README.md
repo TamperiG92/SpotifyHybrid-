@@ -9,7 +9,8 @@ App híbrida (Ionic 9 + Angular 22 + Capacitor 8) con login, registro y reproduc
 - Oscar Leonardo Andrade Diaz
 - Diego Fernando Garzon Tovar
 - Cristian Camilo Camacho Cifuentes
-- ______________________________
+- Gustavo Rojas Vasquez
+ ______________________________
 
 ## Requisitos
 
